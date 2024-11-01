@@ -17,18 +17,18 @@ public class AppDbContext : DbContext
     {
         modelBuilder.Entity<ProductV1>()
             .Property(p => p.Price)
-            .HasColumnType("decimal(18,2)"); // Specify the SQL server column type with precision and scale
+            .HasColumnType("decimal(18,2)");
         
         modelBuilder.Entity<ProductV2>()
             .Property(p => p.Price)
-            .HasColumnType("decimal(18,2)"); // Specify the SQL server column type with precision and scale
+            .HasColumnType("decimal(18,2)");
 
         modelBuilder.Entity<ProductV3>()
             .Property(p => p.Discount)
-            .HasColumnType("decimal(18,2)"); // Specify the SQL server column type with precision and scale
+            .HasColumnType("decimal(18,2)");
 
         modelBuilder.Entity<ProductV3>()
             .Property(p => p.FinalPrice)
-            .HasColumnType("decimal(18,2)"); // Specify the SQL server column type with precision and scale
+            .HasColumnType("decimal(18,2)");
     }
 }
