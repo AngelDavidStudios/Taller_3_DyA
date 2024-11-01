@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Server.Models;
 using Taller_3_DyA.Data;
+using Taller_3_DyA.Repository;
+using Taller_3_DyA.Repository.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +22,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     }
     options.UseSqlServer(connectionString);
 });
+
+// Repositories
+builder.Services.AddScoped<IProductRepository<ProductV1>, ProductRepositoryV1>();
+builder.Services.AddScoped<IProductRepository<ProductV2>, ProductRepositoryV2>();
+builder.Services.AddScoped<IProductRepository<ProductV3>, ProductRepositoryV3>();
 
 
 var app = builder.Build();
