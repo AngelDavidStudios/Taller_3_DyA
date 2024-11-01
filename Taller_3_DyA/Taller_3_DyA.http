@@ -1,0 +1,6 @@
+@Taller_3_DyA_HostAddress = http://localhost:5113
+
+GET {{Taller_3_DyA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
